@@ -7,7 +7,7 @@ def timeToElapse(data):
         return 2**(data[timeToElapse]*30//3)
 
 def estimator(data):
-    data = input(data)
+    data = dict(data)
     impact = {}
     severeImpact = {}
 
