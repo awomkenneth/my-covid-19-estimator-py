@@ -25,13 +25,13 @@ def estimator(data):
 
 #challengeTwo
     impact['severeCasesByRequestedTime'] = round((15/100) * impact['infectionsByRequestedTime'])
-    severeImpact['severeCasesByRequestedTime'] = severeCasesByRequestedTime
+    severeImpact['severeCasesByRequestedTime'] =  severeCasesByRequestedTime
     severeCasesByRequestedTime = round((15/100) * severeImpact['infectionsByRequestedTime'])
     bedsByRequestedTime = round((35/100) * data['totalHospitalBeds'])
 
     impact['hospitalBedsByRequestedTime'] = bedsByRequestedTime - impact['severeCasesByRequestedTime']
     severeImpact['hospitalBedsByRequestedTime'] = bedsByRequestedTime - severeCasesByRequestedTime
-
+#kj
 
 
 
