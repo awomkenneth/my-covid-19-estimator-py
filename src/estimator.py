@@ -24,14 +24,15 @@ def estimator(data):
     severeImpact['infectionsByRequestedTime'] = severeImpact['currentlyInfected'] * timeToElapse(data)
 
 #challengeTwo
-    impact['severeCasesByRequestedTime'] = round((15/100) * impact['infectionsByRequestedTime'])
-    severeImpact['severeCasesByRequestedTime'] =  severeCasesByRequestedTime
+    #Severe impact
     severeCasesByRequestedTime = round((15/100) * severeImpact['infectionsByRequestedTime'])
+    severeImpact['severeCasesByRequestedTime'] =  severeCasesByRequestedTime
     bedsByRequestedTime = round((35/100) * data['totalHospitalBeds'])
-
-    impact['hospitalBedsByRequestedTime'] = bedsByRequestedTime - impact['severeCasesByRequestedTime']
     severeImpact['hospitalBedsByRequestedTime'] = bedsByRequestedTime - severeCasesByRequestedTime
-#kj
+    #Impact
+    impact['severeCasesByRequestedTime'] = round((15/100) * impact['infectionsByRequestedTime'])
+    impact['hospitalBedsByRequestedTime'] = bedsByRequestedTime - impact['severeCasesByRequestedTime']
+
 
 
 
