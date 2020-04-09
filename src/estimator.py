@@ -1,10 +1,15 @@
 def timeToElapse(data):
     if data['periodType'] == 'days':
         return 2**(data['timeToElapse']//3)
+
     elif data['periodType'] == 'weeks':
         return 2**(data['timeToElapse']*7//3)
+
     elif data['periodType'] == 'months':
         return 2**(data[timeToElapse]*30//3)
+
+
+
 
 def estimator(data):
     data = dict(data)
@@ -20,5 +25,4 @@ def estimator(data):
 
 
 
-
-  return data
+return data
